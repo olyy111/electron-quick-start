@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="pull">拉起应用</button>
+    <script>
+        const pullEl = document.getElementById('pull')
+        pullEl.onclick = () => {
+            window.location.href = `foobar://abc=1`;
+        }
+    </script>
+</body>
+</html>

@@ -1,10 +1,12 @@
 {
   "name": "electron-quick-start",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "dev": "electron .",
+    "dist": "electron-builder",
+    "dist-legacy": "electron-builder -c.extraMetadata.version=2.2.2-312342 -c.extraMetadata.productName=pupu"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -16,7 +18,28 @@
   ],
   "author": "GitHub",
   "license": "CC0-1.0",
+  "//": "electron@10.4.2",
   "devDependencies": {
-    "electron": "^22.1.0"
+    "electron": "26.6.2",
+    "electron-builder": "23.6.0"
+  },
+  "dependencies": {
+    "electron-updater": "^6.1.7",
+    "agora-electron-sdk": "^4.2.1",
+    "agora-token": "^2.0.3",
+    "electron-log": "^5.0.1",
+    "express-validator": "^7.0.1"
+  },
+  "build": {
+    "appId": "foobar.id",
+    "mac": {
+      "category": "foo.bar.category"
+    },
+    "protocols": {
+      "name": "foobar-protocol",
+      "schemes": [
+        "foobar"
+      ]
+    }
   }
 }

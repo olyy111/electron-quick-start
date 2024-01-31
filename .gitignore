@@ -1,1 +1,6 @@
 node_modules
+yarn-error.log
+build
+dist
+hosting
+pnpm-lock.yaml
